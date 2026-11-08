@@ -12,6 +12,10 @@ LigaService eingemischt) und wurde als eigenständiges Addon ausgegliedert
 Einstellungen → Optionen → Anzeigen/Darstellung sichtbar aktiviert/
 deaktiviert werden kann.
 
+## Version 1.1.1
+
+- homepage in addon.json zeigt jetzt auf das offizielle Repo lmonext-org/lmonext_addon-teamvergleich (vorher henshingly/...), damit der Update-Check im Addon-Manager Releases findet.
+
 ## Version 1.1.0
 
 - Eigene Sprachdateien ergänzt (addon/teamvergleich/lang/de.php + en.php). Bei genauerer Prüfung waren 8 der zuvor als "geteilt" eingestuften Sprachschlüssel doch addon-exklusiv (keine echte Verwendung außerhalb dieses Addons bzw. außerhalb von PdfExporter::exportH2hPdf(), das ohnehin nur bei aktivem teamvergleich-Addon erreichbar ist): liga_col_spieltag_long, liga_h2h_icon_title, liga_h2h_modal_title, liga_h2h_wins, liga_h2h_draw, liga_h2h_no_matches, liga_h2h_close, h2h_today_prefix - aus lang/frontend/*.php verschoben (siehe dortiger Core-Changelog-Eintrag 1.49.0). hooks_frontend.php ruft jetzt beim Laden explizit addonManager()->loadLanguages('teamvergleich') auf.
